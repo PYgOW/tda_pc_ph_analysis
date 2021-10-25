@@ -30,7 +30,7 @@ PointCloud1 <- read.csv(file.choose(), header = T)
 plot3d(PointCloud1)
 PointCloud2 <- read.csv(file.choose(), header = T)
 plot3d(PointCloud2)
-PointCloud1 <- read.csv(file.choose(), header = T)
+PointCloud3 <- read.csv(file.choose(), header = T)
 plot3d(PointCloud3)
 
 
@@ -59,6 +59,33 @@ PointCloud3 <- read.csv(file.choose(), header = T)
 PC3 <- PointCloud3
 DiagP3 <- ripsDiag(PC3, maxdimension = 1, maxscale = 5, library = "Dionysus", printProgress = TRUE)
 plot(DiagPC3[["diagram"]])
+
+#RipsDiagPC1 <- ripsDiag(PC1, maxdimension = 1, maxscale = 5, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC14 <- ripsDiag(PC1, maxdimension = 1, maxscale = 4, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC13 <- ripsDiag(PC1, maxdimension = 1, maxscale = 3, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC12 <- ripsDiag(PC1, maxdimension = 1, maxscale = 2, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC11<- ripsDiag(PC1, maxdimension = 1, maxscale = 1, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC1MIN-1<- ripsDiag(PC1, maxdimension = 1, maxscale = 6, library = "GUDHI", printProgress = TRUE)
+
+
+RipsDiagPC26 <- ripsDiag(PC2, maxdimension = 1, maxscale = 6, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC24 <- ripsDiag(PC2, maxdimension = 1, maxscale = 4, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC23 <- ripsDiag(PC2, maxdimension = 1, maxscale = 3, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC22 <- ripsDiag(PC2, maxdimension = 1, maxscale = 2, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC21<- ripsDiag(PC2, maxdimension = 1, maxscale = 1, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC1MIN-1<- ripsDiag(PC2, maxdimension = 1, maxscale = 6, library = "GUDHI", printProgress = TRUE)
+
+
+RipsDiagPC36 <- ripsDiag(PC3, maxdimension = 1, maxscale = 1, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC34 <- ripsDiag(PC3, maxdimension = 1, maxscale = 2, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC33 <- ripsDiag(PC3, maxdimension = 1, maxscale = 3, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC32 <- ripsDiag(PC3, maxdimension = 1, maxscale = 4, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC35<- ripsDiag(PC3, maxdimension = 1, maxscale = 5, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC36 <- ripsDiag(PC3, maxdimension = 1, maxscale = 6, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC37 <- ripsDiag(PC3, maxdimension = 1, maxscale = 7, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC38 <- ripsDiag(PC3, maxdimension = 1, maxscale = 8, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC39 <- ripsDiag(PC3, maxdimension = 1, maxscale = 9, library = "GUDHI", printProgress = TRUE)
+RipsDiagPC310<- ripsDiag(PC3, maxdimension = 1, maxscale = 10, library = "GUDHI", printProgress = TRUE)
 
 
 ######## Homology of PointCloud1 #######################
@@ -109,32 +136,6 @@ distance1 <- distFct(PC1, Grid = Gridp)
   #               sublevel = TRUE, library = "Dionysus", printProgress = FALSE)
 
 ############################################################################################3
-#RipsDiagPC1 <- ripsDiag(PC1, maxdimension = 1, maxscale = 5, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC14 <- ripsDiag(PC1, maxdimension = 1, maxscale = 4, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC13 <- ripsDiag(PC1, maxdimension = 1, maxscale = 3, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC12 <- ripsDiag(PC1, maxdimension = 1, maxscale = 2, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC11<- ripsDiag(PC1, maxdimension = 1, maxscale = 1, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC1MIN-1<- ripsDiag(PC1, maxdimension = 1, maxscale = 6, library = "GUDHI", printProgress = TRUE)
-
-
-RipsDiagPC26 <- ripsDiag(PC2, maxdimension = 1, maxscale = 6, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC24 <- ripsDiag(PC2, maxdimension = 1, maxscale = 4, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC23 <- ripsDiag(PC2, maxdimension = 1, maxscale = 3, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC22 <- ripsDiag(PC2, maxdimension = 1, maxscale = 2, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC21<- ripsDiag(PC2, maxdimension = 1, maxscale = 1, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC1MIN-1<- ripsDiag(PC2, maxdimension = 1, maxscale = 6, library = "GUDHI", printProgress = TRUE)
-
-
-RipsDiagPC36 <- ripsDiag(PC3, maxdimension = 1, maxscale = 1, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC34 <- ripsDiag(PC3, maxdimension = 1, maxscale = 2, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC33 <- ripsDiag(PC3, maxdimension = 1, maxscale = 3, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC32 <- ripsDiag(PC3, maxdimension = 1, maxscale = 4, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC35<- ripsDiag(PC3, maxdimension = 1, maxscale = 5, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC36 <- ripsDiag(PC3, maxdimension = 1, maxscale = 6, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC37 <- ripsDiag(PC3, maxdimension = 1, maxscale = 7, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC38 <- ripsDiag(PC3, maxdimension = 1, maxscale = 8, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC39 <- ripsDiag(PC3, maxdimension = 1, maxscale = 9, library = "GUDHI", printProgress = TRUE)
-RipsDiagPC310<- ripsDiag(PC3, maxdimension = 1, maxscale = 10, library = "GUDHI", printProgress = TRUE)
 
 
 FltRips <- ripsFiltration(PC1,maxdimension = 1, maxscale = 1.5, library = "GUDHI", printProgress = TRUE)
